@@ -1,0 +1,38 @@
+The title of this adventure is The Loneliest Dragon.
+
+You start with:
+- A sword
+- A pouch of gold
+- A cucumber sandwich
+
+Page 1:
+You wake up in your small house at the south of the village to the sound of a rooster crowing. You yawn, stretch and make your way into your little kitchen.
+
+What to have for breakfast?
+
+To quickly gobble yesterday's cucumber sandwich and get on with your day, go to page 5.
+
+To take your time and make a hearty meal of sausages, potatoes, beans and juice, go to page 20.
+
+Page 5:
+Your nose smells adventure! Keen to track it down, whatever it may be, you shove the slighty limp sandwich into your mouth and stride out the door, still chewing.
+
+Go to page 8.
+
+Page 8:
+The big village bell is clanging, signalling all adventurers to congregate at the hall.
+
+To head to the hall, go to page 37.
+
+To get a head start on the other adventurers by sneaking out of the village, go to page 16.
+
+Page 20:
+Breakfast is the most important meal of the day, and you give it the attention it deserves.
+
+Halfway through eating, the village librarian knocks on your door.
+
+"I've got those books on dragons you were asking for. Pretty hot stuff!"
+
+You pop the books in your backpack, thank the librarian and finish your breakfast. Feeling pleasantly full and ready for anything, you stroll out your door and into the village.
+
+Go to page 8.
