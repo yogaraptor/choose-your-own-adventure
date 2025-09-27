@@ -30,4 +30,10 @@ At a minimum, it should:
 
 ## Technical restrictions
 
-- No dependencies/frameworks
+- No dependencies/frameworks, except for a formatter/linter to allow contributors to easily submit patches that match the code style of the project.
+
+## Contributing
+
+1. Install Biome, our formatter/linter with `npm i`.
+2. Make your awesome change.
+3. Format and lint any changes with `npm run format` and `npm run lint`. This helps keep all the code in the same rough style.
