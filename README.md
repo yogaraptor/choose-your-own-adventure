@@ -37,3 +37,4 @@ At a minimum, it should:
 1. Install Biome, our formatter/linter with `npm i`.
 2. Make your awesome change.
 3. Format and lint any changes with `npm run format` and `npm run lint`. This helps keep all the code in the same rough style.
+4. Check the unit tests pass with `npm test`.
