@@ -1,6 +1,10 @@
+const regexes = {
+  title: /The title of this adventure is (?<name>.*)\./,
+  page: /Page [0-9]+:/,
+};
+
 function extractAdventureTitle(text) {
-  const title = text.match(/The title of this adventure is (?<name>.*)\./)
-    ?.groups.name;
+  const title = text.match(regexes.title)?.groups.name;
 
   if (!title)
     throw new Error(
@@ -13,5 +17,23 @@ function extractAdventureTitle(text) {
 export function parseAdventure(text) {
   const title = extractAdventureTitle(text);
 
-  return { title };
+  const firstPageIndex = text.search(regexes.page);
+  const pages = text
+    .substr(firstPageIndex)
+    .replace(`The title of this adventure is ${title}`, "")
+    .split(regexes.page)
+    .map((page) => {
+      const linkMatches = page.match(/Turn to page (?<page>[0-9]+)./);
+      let pageText = page,
+        goto;
+      if (linkMatches) {
+        goto = linkMatches?.groups.page;
+        pageText = pageText.replace(linkMatches[0]);
+      }
+      pageText = pageText.trim();
+      return { text: pageText, goto };
+    })
+    .filter((page) => page.text.length > 0);
+
+  return { title, pages };
 }
