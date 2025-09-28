@@ -1,4 +1,4 @@
-export function parseAdventure(text) {
+function extractAdventureTitle(text) {
   const title = text.match(/The title of this adventure is (?<name>.*)\./)
     ?.groups.name;
 
@@ -6,5 +6,12 @@ export function parseAdventure(text) {
     throw new Error(
       "Adventure is missing a title. Please check AUTHORING.md for instructions on formatting adventure files."
     );
+
+  return title;
+}
+
+export function parseAdventure(text) {
+  const title = extractAdventureTitle(text);
+
   return { title };
 }
