@@ -46,7 +46,7 @@ export default function testAdventureParser() {
     const pageTexts = [
       "Welcome to the adventure. Turn to page 3.",
       "See? This is the end.",
-      "Typically, pages don't actually go in order!. Turn to page 2.",
+      "Typically, pages don't actually go in order! Turn to page 2.",
     ];
     const exampleAdventure = `The title of this adventure is The Case of the Turning Pages.
 Page 1:
@@ -61,8 +61,14 @@ ${pageTexts[2]}
 
     const result = parseAdventure(exampleAdventure);
 
+    assert.equal(result.pages[0].text, "Welcome to the adventure.");
     assert.equal(result.pages[0].goto, 3);
+    assert.equal(result.pages[1].text, "See? This is the end.");
     assert.equal(result.pages[2].goto, 2);
+    assert.equal(
+      result.pages[2].text,
+      "Typically, pages don't actually go in order!"
+    );
     assert.equal(result.pages[1].goto, undefined);
   }
 

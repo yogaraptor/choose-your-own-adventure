@@ -28,7 +28,7 @@ export function parseAdventure(text) {
         goto;
       if (linkMatches) {
         goto = linkMatches?.groups.page;
-        pageText = pageText.replace(linkMatches[0]);
+        pageText = pageText.replace(linkMatches[0], "");
       }
       pageText = pageText.trim();
       return { text: pageText, goto };
